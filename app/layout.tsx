@@ -18,10 +18,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.className} dark`}>
-
-          <div className="flex-1">{children}</div>
-
-
+      
+        {children}   
       </body>
     </html>
   );
