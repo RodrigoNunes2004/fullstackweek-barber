@@ -122,6 +122,7 @@ const { PrismaClient } = require("@prisma/client");
                  id: barbershop.id,
                },
              },
+             imageUrl: service.imageUrl,
            },
          });
        }
