@@ -91,7 +91,7 @@ const { PrismaClient } = require("@prisma/client");
           name: "Moisturizing",
           description: "Deep hydration for hair and beard.",
           price: 25.0,
-          imageUrl: "Hydrated, soft, and shiny strands.",
+          imageUrl: "https://utfs.io/f/8a457cda-f768-411d-a737-cdb23ca6b9b5-b3pegf.png",
         },
       ];
     
@@ -133,7 +133,7 @@ const { PrismaClient } = require("@prisma/client");
      // Fechar a conexão com o banco de dados
      await prisma.$disconnect();
    } catch (error) {
-     console.error("Erro ao criar as barbearias:", error);
+     console.error("Error on create barbers:", error);
    }
  }
  
