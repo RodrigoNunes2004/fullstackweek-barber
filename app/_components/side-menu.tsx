@@ -38,11 +38,11 @@ const SideMenu = () => {
         <div className="flex flex-col px-5 py-6 gap-3">
           <div className="flex items-center gap-2">
             <UserIcon size={32} />
-            <h2 className="font-bold">Please login!</h2>
+            <h2 className="font-bold">Please, login!</h2>
           </div>
           <Button variant="secondary" className="w-full justify-start" onClick={handleLoginClick}>
             <LogInIcon className="mr-2" size={18} />
-            Fazer Login
+            Make Login
           </Button>
         </div>
       )}
