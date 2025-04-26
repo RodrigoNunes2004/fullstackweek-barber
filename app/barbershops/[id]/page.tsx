@@ -5,25 +5,31 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/_lib/auth";
 
 interface PageProps {
-    params: Awaited<{ id: string }>;
-  }
+  params: { id?: string };
+}
 
 const BarbershopDetailsPage = async ({ params }: PageProps) => {
+  console.log("Recebendo params:", params);
+
+  if (!params?.id) {
+    console.error("Erro: ID não fornecido!");
+    return null;
+  }
+
   const session = await getServerSession(authOptions);
 
+  console.log("Buscando barbearia no banco...");
   const barbershop = await db.barbershop.findUnique({
-    where: {
-      id: params.id,
-    },
-    include: {
-      services: true,
-    },
+    where: { id: params.id },
+    include: { services: true },
   });
 
   if (!barbershop) {
-    // TODO: redirect to home page
+    console.error("Erro: Nenhuma barbearia encontrada para o ID", params.id);
     return null;
   }
+
+  console.log("Renderização concluída.");
 
   return (
     <div className="px-5 flex flex-col gap-5 py-6">

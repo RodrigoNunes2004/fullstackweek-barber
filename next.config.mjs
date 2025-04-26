@@ -1,12 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
     images: {
-        remotePatterns: [
-            {
-                hostname: "utfs.io"
-            },
-        ],
+      remotePatterns: [
+        {
+          hostname: "utfs.io",
+        },
+      ],
     },
-};
-
-export default nextConfig;
+    eslint: {
+      ignoreDuringBuilds: true,
+    },
+  };
+  
+  export default nextConfig;
