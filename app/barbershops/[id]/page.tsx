@@ -5,10 +5,8 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/_lib/auth";
 
 interface PageProps {
-  params: {
-    id: string;
-  };
-}
+    params: Awaited<{ id: string }>;
+  }
 
 const BarbershopDetailsPage = async ({ params }: PageProps) => {
   const session = await getServerSession(authOptions);
