@@ -5,11 +5,9 @@ import { getServerSession } from "next-auth";
 import { authOptions } from "@/app/_lib/auth";
 
 
-interface BarbershopDetailsPageProps{
-    params: {
-        id?: string;
-    };
-}
+interface BarbershopDetailsPageProps {
+    params: { id?: string };
+  }
 
 const BarbershopDetailsPage = async ({params}: BarbershopDetailsPageProps) => {
     
