@@ -6,7 +6,7 @@ import { authOptions } from "@/app/_lib/auth";
 
 
 interface BarbershopDetailsPageProps {
-    params: { id?: string };
+    params: Record<string, string>;
   }
 
 const BarbershopDetailsPage = async ({params}: BarbershopDetailsPageProps) => {
