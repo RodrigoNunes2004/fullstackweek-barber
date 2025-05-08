@@ -6,6 +6,7 @@ import { db } from "../_lib/prisma";
 import BarbershopItem from "./_components/barbershop-item";
 import { getServerSession } from "next-auth";
 import { authOptions } from "../_lib/auth";
+import { promise } from "zod";
 
 
 export default async function Home() {
